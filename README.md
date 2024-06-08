@@ -54,7 +54,7 @@ A honeypot will be created using a VM in Azure. The VM's RDP port will be open f
 <img width="1198" alt="10" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/80c6417c-d913-4ba7-8456-65ac3fc11ff5">
 
 8. Within VM
-	1. Open "Event Viewer" -> Windows Logs -> Security -> Filter Current Log..." -> input "4625" on Event ID section  **WHAT IS 4625 - CREATE A NOTE**
+	1. Open "Event Viewer" -> Windows Logs -> Security -> Filter Current Log..." -> input "4625" on Event ID section  
 <img width="544" alt="11" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/2361221f-c54f-48f8-8d4f-a23dc03cf5b1">
 	2. Turn off Windows Defender Firewall
 
