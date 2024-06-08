@@ -17,14 +17,14 @@ A honeypot will be created using a VM in Azure. The VM's RDP port will be open f
 # Steps
 1. Create a Microsoft Azure account
 2. Create **Resource Group**
-   <img width="796" alt="1" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/400a8ae0-d49e-4d87-b5c0-5aeb5086e8ac">
+<img width="796" alt="1" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/400a8ae0-d49e-4d87-b5c0-5aeb5086e8ac">
    
 3. Create **Virtual Machine** -> "Azure Virtual Machine"
 	- 2nd half keep everything as default and create an admin account
 	- Had to change to Zone 2 to get Size: Standard_D2s_v3
 <img width="803" alt="2" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/fe25fa9b-41ce-4b5e-b87a-d50f4e733651">
  
- <img width="580" alt="3" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/c9fd4f6e-6a58-4639-a677-08935b7ab21a">
+<img width="580" alt="3" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/c9fd4f6e-6a58-4639-a677-08935b7ab21a">
 
 <img width="820" alt="4" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/ac27e2f2-20d3-43a4-be44-8cbfbbe7fbfb">
 
@@ -104,31 +104,34 @@ country = extract(@"country:([^,]+)", 1, RawData)
 
 11. Create a custom log in Log Analytics Workspace
 	1. *workspace* -> Tables -> Create -> New custom log (MMA-based)
-<img width="866" alt="15" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/c5aa51ce-d255-43c1-a6a7-c6ffe3deb880">
+ 
+ <img width="725" alt="Screenshot 2024-06-05 at 11 50 31 PM" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/28405b89-6ec2-40fb-a393-9cea17b219fd">
 
-<img width="1501" alt="Screenshot 2024-06-06 at 12 33 31 AM" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/8fc138b9-646f-4152-8645-7a5f1f4e2650">
+ <img width="725" alt="Screenshot 2024-06-05 at 11 50 31 PM" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/94e962d9-b178-4439-b376-a4c4f9317921">
+based)
 
-<img width="744" alt="Screenshot 2024-06-05 at 11 51 33 PM" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/dad92bd0-3a2b-4a34-995b-74f9690eac7e">
+<img width="744" alt="Screenshot 2024-06-05 at 11 51 33 PM" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/5fb30e44-3000-45be-8c08-41d9be648c9e">
 
-<img width="726" alt="Screenshot 2024-06-05 at 11 52 01 PM" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/24f56d49-4ee0-47c1-89b0-73249a5629db">
-	2. Save
-<img width="319" alt="Screenshot 2024-06-06 at 12 30 22 AM" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/7f897cac-351a-48f0-8f56-f5be50c5eb60">
+<img width="726" alt="Screenshot 2024-06-05 at 11 52 01 PM" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/094806b0-cf24-44a0-b050-9a239c3a7e93">
+ 	2. Save
+  
+ <img width="319" alt="Screenshot 2024-06-06 at 12 30 22 AM" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/9d35964e-17aa-4c11-ae09-b5ddddbb2273">
+
+ 
 
 12. Create a workbook in **Microsoft Sentinel**
 	1. Microsoft Sentinel -> *your log analysis workbook* > Workbooks > Add Workbook
-<img width="1228" alt="Screenshot 2024-06-06 at 12 32 05 AM" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/26e96e75-9dd3-422f-8e3a-f66dd3dbdff0">
+<img width="1228" alt="Screenshot 2024-06-06 at 12 32 05 AM" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/95cb8fb4-0e4f-494a-b76a-25439e2236c9">
 
  	2. Edit and remove everything until it's empty
+	
+ 	3. Run the query to test
+<img width="1501" alt="Screenshot 2024-06-06 at 12 33 31 AM" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/af77b073-1c3d-4fc9-8066-082b155896b3">
+	
+ 	4. Change the visualization to "map", Save
+ <img width="712" alt="Screenshot 2024-06-06 at 12 34 32 AM" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/87663982-8170-415e-b4ac-610f5a9799c0">
 
-	3. Run the query to test
-<img width="1503" alt="Screenshot 2024-06-05 at 11 54 51 PM" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/7add3e7d-ac83-4ea2-962d-c1ebe1741632">
 
-<img width="1501" alt="Screenshot 2024-06-06 at 12 33 31 AM" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/8fc138b9-646f-4152-8645-7a5f1f4e2650">
-	4. Change the visualization to "map", Save
-
-<img width="725" alt="Screenshot 2024-06-05 at 11 50 31 PM" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/dc0c1abc-c0fb-4b7d-a6ab-edfc789dc051">
-
-<img width="712" alt="Screenshot 2024-06-06 at 12 34 32 AM" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/22ddc49c-365b-4ea9-a2ca-22ff6d59700d">
 
 
 13. Monitor the Sentinel Workbook and the VM Powerscript
