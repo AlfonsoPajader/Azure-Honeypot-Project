@@ -1,7 +1,7 @@
 # Azure-Honeypot-Project
 
 # Objective
-A honeypot will be created using a VM in Azure. The VM's RDP port will be open for attackers. Meanwhile, the creator will be able collect and analyze logs with the help of a geographical map. Attackers will be plotted on to the map as they try to go for the honeypot.
+A honeypot will be created using a VM in Azure. The VM's firewall and RDP port will be open for attackers. Meanwhile, analysts can collect and analyze logs of the attacks. The live attacks towards the honeypot will be plotted on to the geographical Azure Sentinel map.
 
 # Skills Learned
 - Developed a vulnerable VM in Azure to act as a honeypot.
@@ -42,7 +42,8 @@ A honeypot will be created using a VM in Azure. The VM's RDP port will be open f
  <img width="1483" alt="7" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/b883a5a8-5f0c-4efb-87e7-756d907aeb32">
 
 <img width="1491" alt="8" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/4e916c22-8520-43e9-b627-c43cc48668a6">
-### 2 . In Data collection, select "All Events", Save
+
+### ii. In Data collection, select "All Events", Save
 
 <img width="1190" alt="9" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/89370284-8a54-4284-bec2-ed8e3fde2ec5">
 
@@ -57,6 +58,7 @@ A honeypot will be created using a VM in Azure. The VM's RDP port will be open f
 ## 8. Within VM
 ### i. Open "Event Viewer" -> Windows Logs -> Security -> Filter Current Log..." -> input "4625" on Event ID section  
 <img width="544" alt="11" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/2361221f-c54f-48f8-8d4f-a23dc03cf5b1">
+
 ### ii. Turn off Windows Defender Firewall
 
 <img width="1100" alt="12" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/1a2a0556-f1cb-4c4e-8b9a-a811c0b3eab9">
@@ -108,9 +110,6 @@ country = extract(@"country:([^,]+)", 1, RawData)
  
  <img width="725" alt="Screenshot 2024-06-05 at 11 50 31 PM" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/28405b89-6ec2-40fb-a393-9cea17b219fd">
 
- <img width="725" alt="Screenshot 2024-06-05 at 11 50 31 PM" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/94e962d9-b178-4439-b376-a4c4f9317921">
-based)
-
 <img width="744" alt="Screenshot 2024-06-05 at 11 51 33 PM" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/5fb30e44-3000-45be-8c08-41d9be648c9e">
 
 <img width="726" alt="Screenshot 2024-06-05 at 11 52 01 PM" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/094806b0-cf24-44a0-b050-9a239c3a7e93">
@@ -133,14 +132,13 @@ based)
  <img width="712" alt="Screenshot 2024-06-06 at 12 34 32 AM" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/87663982-8170-415e-b4ac-610f5a9799c0">
 
 
-
-
 ## 13. Monitor the Sentinel Workbook and the VM Powerscript
 <img width="663" alt="Screenshot 2024-06-06 at 12 35 41 AM" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/564b25e7-ecaa-493d-8daa-c74e44550f2f">
 
 # Reflection
 <img width="619" alt="Screenshot 2024-06-07 at 8 08 21 AM" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/edeb8b7b-fbec-4271-82cf-c296b829f93a">
+After 24 hours, more logs have been captured and displayed on the map. Most of the attacks are originating from the Netherlands. Vulnerabilities such as firewall and ports need to be appropriately considered to have a secure host. Given the map, it can give insights on how to improve one's security posture and response.
 
-
-# REF
+# Reference
+ - [Josh Makada](https://youtu.be/RoZeVbbZ0o0?si=VXqGOxIOS2tumEdc)
 
