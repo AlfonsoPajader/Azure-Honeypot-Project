@@ -138,7 +138,7 @@ country = extract(@"country:([^,]+)", 1, RawData)
 # Reflection
 <img width="619" alt="Screenshot 2024-06-07 at 8 08 21 AM" src="https://github.com/AlfonsoPajader/Azure-Honeypot-Project/assets/142128030/edeb8b7b-fbec-4271-82cf-c296b829f93a">
 
-After 24 hours, more logs have been captured and displayed on the map. Most of the attacks are originating from the Netherlands. Vulnerabilities such as firewall and ports need to be appropriately considered to have a secure host. Given the map, it can give insights on how to improve one's security posture and response.
+After 24 hours, more logs have been captured and displayed on the map. Most of the attacks are originating from the Netherlands. Vulnerabilities such as firewall and ports need to be appropriately considered to have a secure host. Given the map, it can give insights on how to improve one's security posture and response. A defender can perform reconnaisance on the attack. For example, if the defender knows what type of attack they're using, they can implement certain controls to strengthen their security.
 
 # Reference
  - [Josh Madakor](https://youtu.be/RoZeVbbZ0o0?si=VXqGOxIOS2tumEdc)
